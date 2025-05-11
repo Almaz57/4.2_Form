@@ -1,0 +1,57 @@
+{
+	"name": "vite-project",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"lint": "eslint .",
+		"format": "prettier --write ./src",
+		"postinstall": "npx force-resolutions"
+	},
+	"dependencies": {
+		"@hookform/resolvers": "^5.0.1",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"react-hook-form": "^7.56.3",
+		"yup": "^1.6.1"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.21.0",
+		"@types/react": "^19.0.10",
+		"@types/react-dom": "^19.0.4",
+		"@vitejs/plugin-react-swc": "^3.8.0",
+		"babel-plugin-check-prop-types": "^1.1.0",
+		"eslint": "^9.21.0",
+		"eslint-plugin-react-hooks": "^5.1.0",
+		"eslint-plugin-react-refresh": "^0.4.19",
+		"force-resolutions": "^1.0.11",
+		"globals": "^15.15.0",
+		"prettier": "^3.5.3",
+		"prop-types": "^15.8.1",
+		"prop-types-compat": "^15.8.2",
+		"react-is": "19.0.0",
+		"vite": "^5.2.8",
+		"vite-plugin-svgr": "^4.3.0"
+	},
+	"resolutions": {
+		"react-is": "19.0.0",
+		"**/react-is": "19.0.0",
+		"prop-types": "npm:prop-types-compat@15.8.2",
+		"@vitejs/plugin-react-swc": "3.8.0"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
+}
