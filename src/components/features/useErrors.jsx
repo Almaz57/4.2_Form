@@ -27,7 +27,7 @@ export const useErrors = (submitInputRef, submitButtonRef) => {
 		register,
 		handleSubmit,
 		reset, // удалить данные
-		formState: { errors },
+		formState: { isValid, errors },
 		watch, // для отслеживания значения пароля
 		trigger, // для ручной валидации
 	} = useForm({
@@ -39,7 +39,7 @@ export const useErrors = (submitInputRef, submitButtonRef) => {
 		resolver: yupResolver(fieldsScheme),
 	});
 
-	let emailValue = watch('email');
+	//let emailValue = watch('email');
 	let repeatPasswordValue = watch('repeatPassword');
 	let passwordValue = watch('password');
 
@@ -84,17 +84,11 @@ export const useErrors = (submitInputRef, submitButtonRef) => {
 	const repeatPasswordError = errors.repeatPassword?.message;
 
 	// фокус на кнопку
-	const allFieldsFilled =
-		emailValue?.trim() && passwordValue?.trim() && repeatPasswordValue?.trim();
-	if (
-		!emailError && // нет ошибок
-		!passwordError &&
-		!repeatPasswordError &&
-		allFieldsFilled && // заполненные поля
-		passwordValue === repeatPasswordValue && // пароли повторяются
-		document.activeElement === !submitInputRef.current // фокус не на email
-	)
-		setTimeout(() => submitButtonRef.current.focus(), 0);
+	useEffect(() => {
+		if (isValid) {
+			submitButtonRef.current.focus();
+		}
+	}, [isValid]);
 
 	return {
 		register,
