@@ -14,18 +14,6 @@
 	font-size: 1.8rem;
 }
 
-.form-group {
-	margin-bottom: 1.5rem;
-}
-
-label {
-	display: block;
-	margin-bottom: 0.5rem;
-	color: #555;
-	font-weight: 500;
-}
-
-.form-input,
 .submit-btn {
 	width: 100%;
 	padding: 12px 15px;
@@ -34,17 +22,6 @@ label {
 	font-size: 1rem;
 	line-height: 1.5;
 	box-sizing: border-box;
-}
-
-.form-input {
-	background: white;
-	transition: border-color 0.3s ease;
-}
-
-.form-input:focus {
-	outline: none;
-	border-color: #007bff;
-	box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
 }
 
 .submit-btn {
@@ -81,10 +58,4 @@ label {
 
 .submit-btn:active:focus {
 	transform: scale(0.98);
-}
-
-.error-message {
-	color: #dc3545;
-	font-size: 1rem;
-	margin-top: 0.25rem;
 }
